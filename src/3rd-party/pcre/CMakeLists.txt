@@ -73,8 +73,8 @@ PROJECT(PCRE C CXX)
 # Increased minimum to 2.8.0 to support newer add_test features. Set policy
 # CMP0026 to avoid warnings for the use of LOCATION in GET_TARGET_PROPERTY.
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0)
-CMAKE_POLICY(SET CMP0026 OLD)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5.1)
+#CMAKE_POLICY(SET CMP0026 OLD)
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake) # for FindReadline.cmake
 
