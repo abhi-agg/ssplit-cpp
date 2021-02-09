@@ -622,6 +622,7 @@ SET(targets)
 # pcre
 IF(PCRE_BUILD_PCRE8)
 ADD_LIBRARY(pcre ${PCRE_HEADERS} ${PCRE_SOURCES} ${PROJECT_BINARY_DIR}/config.h)
+target_include_directories(pcre PUBLIC ${PROJECT_BINARY_DIR})
 SET(targets ${targets} pcre)
 ADD_LIBRARY(pcreposix ${PCREPOSIX_HEADERS} ${PCREPOSIX_SOURCES})
 SET(targets ${targets} pcreposix)
@@ -686,6 +687,7 @@ ENDIF(PCRE_BUILD_PCRE32)
 # pcrecpp
 IF(PCRE_BUILD_PCRECPP)
 ADD_LIBRARY(pcrecpp ${PCRECPP_HEADERS} ${PCRECPP_SOURCES})
+target_include_directories(pcrecpp PUBLIC . ${PROJECT_BINARY_DIR})
 SET(targets ${targets} pcrecpp)
 TARGET_LINK_LIBRARIES(pcrecpp pcre)
 
