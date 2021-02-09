@@ -177,7 +177,7 @@ SET(PCRE_SUPPORT_VALGRIND OFF CACHE BOOL
     "Enable Valgrind support.")
 
 OPTION(PCRE_SHOW_REPORT    "Show the final configuration report" ON)
-OPTION(PCRE_BUILD_PCREGREP "Build pcregrep" ON)
+OPTION(PCRE_BUILD_PCREGREP "Build pcregrep" OFF)
 OPTION(PCRE_BUILD_TESTS    "Build the tests" ON)
 
 IF (MINGW)
